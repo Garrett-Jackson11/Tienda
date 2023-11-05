@@ -50,7 +50,7 @@
                                                 th:text="${c.descripcion}"
                                                 ></option>
                                     </select>
-                                  
+
                                 </div>
 
                                 <div class="mb-3">
@@ -170,10 +170,44 @@
                                             </div>
                                             <div class="card-body">
                                                 <div class="mb-3">
+                                                    <label for="Categoria">[[#{producto.categoria}]]</label>
+                                                    <select class="form-select" 
+                                                            aria-label="Default select example"
+                                                            name="idCategoria">
+                                                        <option th:each="c : ${categorias}"
+                                                                th:value="c.idCategoria"
+                                                                th:text="${c.descripcion}"
+                                                                ></option>
+                                                    </select>
+
+                                                </div>
+                                                <div class="mb-3">
                                                     <label for="descripcion">[[#{producto.descripcion}]]</label>
                                                     <input type="text" class="form-control" 
                                                            name="descripcion" th:field="*{descripcion}"
                                                            required="true">
+                                                </div>
+
+                                                <div class="mb-3">
+                                                    <label for="detalle">[[#{producto.detalle}]]</label>
+                                                    <textarea  class="form-control" name="detalle" rows="3"></textarea>
+                                                </div>
+
+                                                <div class="mb-3">
+                                                    <label for="precio">[[#{producto.precio}]]</label>
+                                                    <input class="form-control" 
+                                                           type="number" 
+                                                           name="activo" 
+                                                           id="activo"
+                                                           th:field="*{precio}">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="existencias">[[#{producto.existencias}]]</label>
+                                                    <input class="form-control" 
+                                                           type="number" 
+                                                           name="activo" 
+                                                           id="activo"
+                                                           th:field="*{existencias}">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="activo">[[#{producto.activo}]]</label>
