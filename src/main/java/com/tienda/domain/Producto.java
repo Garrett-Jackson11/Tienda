@@ -25,6 +25,6 @@ public class Producto implements Serializable {
 
     @ManyToOne
     @JoinColumn(name="id_categoria")
-    Categoria  categoria;
+    Categoria categoria;
 
 }
